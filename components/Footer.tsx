@@ -9,8 +9,8 @@ export default function Footer() {
               Dalle serate di relax alle serate più vive dell'estate.<br />Esabeach è l'esperienza che trasformaogni momento<br />in qualcosa di speciale.
             </p>
             <div className="mt-9 flex gap-9 text-[12px] font-bold uppercase tracking-[.1em] text-white">
-              <a href="#" className="transition-opacity hover:opacity-60">Instagram</a>
-              <a href="#" className="transition-opacity hover:opacity-60">Facebook</a>
+              <a href="https://www.instagram.com/chalet.esabeach/" className="transition-opacity hover:opacity-60">Instagram</a>
+              <a href="https://www.facebook.com/ristorante.pizzeria.esabeach/" className="transition-opacity hover:opacity-60">Facebook</a>
             </div>
           </div>
 
@@ -19,8 +19,6 @@ export default function Footer() {
             <ul className="space-y-4 text-[12px] font-bold uppercase tracking-[.08em] text-white/78">
               <li><a href="#about">About</a></li>
               <li><a href="mailto:esabeachsrl@gmail.com">Contact</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Careers</a></li>
             </ul>
           </div>
 
@@ -29,7 +27,7 @@ export default function Footer() {
             <p className="text-[12px] font-bold uppercase leading-[1.6] tracking-[.08em] text-white/78">
               Viale della Vittoria, snc<br />63821 Porto Sant'Elpidio<br />Marche, Italy
             </p>
-            <a href="#" className="mt-8 inline-flex text-[12px] font-bold uppercase tracking-[.08em] text-white">Get Directions ↗</a>
+            <a href="https://maps.app.goo.gl/sQZCBHQseC364obe8" className="mt-8 inline-flex text-[12px] font-bold uppercase tracking-[.08em] text-white">Get Directions ↗</a>
           </div>
 
           <div>
@@ -41,10 +39,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 flex flex-col gap-6 text-[10px] font-bold uppercase tracking-[.12em] text-white/45 md:flex-row md:items-center md:justify-between">
-          <p>© ESABEACH 2024 — All rights reserved</p>
+          <p>© ESABEACH 2026 — All rights reserved</p>
           <div className="flex gap-12">
             <a href="/privacy-policy">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
           </div>
         </div>
       </div>
