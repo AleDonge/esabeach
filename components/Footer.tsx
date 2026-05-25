@@ -18,7 +18,7 @@ export default function Footer() {
             <h3 className="mb-7 text-[11px] font-bold uppercase tracking-[.18em] text-white/70">Info</h3>
             <ul className="space-y-4 text-[12px] font-bold uppercase tracking-[.08em] text-white/78">
               <li><a href="#about">About</a></li>
-              <li><a href="mailto:esabeachsrl@gmail.com">Contact</a></li>
+              <li><a href="https://wa.me/${phoneNumber}?text=">Contact</a></li>
             </ul>
           </div>
 
