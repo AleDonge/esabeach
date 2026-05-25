@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import CustomCursor from '@/components/CustomCursor';
 import './globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 
 export const metadata: Metadata = {
   title: 'ESABEACH — Mediterranean Beach Culture',
@@ -23,6 +25,7 @@ export default function RootLayout({
       <body>
         <CustomCursor />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
