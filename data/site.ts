@@ -49,18 +49,6 @@ export const events = [
     description: 'Inizia la tua estate con il ritmo giusto! Unisciti a noi per un brunch indimenticabile accompagnato dalle sonorità coinvolgenti di DJ Emiliano Effe. Dalle 11:00 fino al tramonto, goditi una selezione musicale che ti farà ballare sulla sabbia e creare ricordi indimenticabili. Non perdere l\'occasione di vivere un\'esperienza unica al mare, con buona musica, ottimo cibo e l\'atmosfera vibrante di Esabeach. Ti aspettiamo per dare il via alla tua estate nel modo migliore!'
   },
   {
-    day: '6',
-    month: 'GIUGNO',
-    date: '2026-06-06',
-    artist: 'DJ EMILIANO EFFE',
-    label: 'DJ Set al tramonto',
-    image: '/media/emilianof2.webp',
-    time: '18:00 - 22:00',
-    location: 'ESABEACH, Porto Sant\'Elpidio',
-    price: 'FREE ENTRY',
-    description: 'Vivi un\'esperienza indimenticabile con il ritmo giusto! Unisciti a noi per un set DJ al tramonto, con sonorità coinvolgenti di DJ Emiliano Effe. Dalle 18:00 fino alle 22:00, goditi una selezione musicale che ti farà ballare sulla sabbia e creare ricordi indimenticabili. Non perdere l\'occasione di vivere un\'esperienza unica al mare, con buona musica, ottimo cibo e l\'atmosfera vibrante di Esabeach. Ti aspettiamo per dare il via alla tua estate nel modo migliore!'
-  },
-  {
     day: '14',
     month: 'GIUGNO',
     date: '2026-06-14',
