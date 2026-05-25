@@ -5,7 +5,11 @@ import { ArrowUpRight } from 'lucide-react';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export default function CTASection() {
+export default function CTASection({
+  onReserveClick
+}: {
+  onReserveClick: () => void;
+}) {
   return (
     <section id="reserve" className="bg-navy pb-[80px] md:pb-[110px]">
       <div className="luxury-container">
@@ -40,17 +44,17 @@ export default function CTASection() {
             >
               Un esperienza da vivere,<br />Non da raccontare.
             </motion.h2>
-            <motion.a
-              initial={{ y: 24, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+            <motion.button
+              type="button"
+              whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.18, ease }}
-              href="https://wa.me/393384274310?text="
+              transition={{ duration: 0.3, ease }}
+              onClick={onReserveClick}
               className="group mt-10 inline-flex w-full items-center justify-center gap-12 rounded-full bg-navy px-9 py-5 text-[12px] font-bold uppercase tracking-cta text-white shadow-[0_22px_50px_rgba(7,24,38,.25)] transition-all duration-500 ease-ios hover:scale-[1.03] hover:bg-white hover:text-navy active:scale-[.97] sm:w-auto sm:min-w-[315px]"
             >
               Inizia la tua estate
               <ArrowUpRight size={17} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>

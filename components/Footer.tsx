@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="about" className="bg-navy pb-10 pt-2 text-white">
+    <footer className="bg-navy pb-10 pt-2 text-white">
       <div className="luxury-container">
         <div className="grid gap-12 border-t border-white/[.04] pt-12 md:grid-cols-[1.35fr_.7fr_1fr_1fr] md:gap-20">
           <div>
@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="mt-20 flex flex-col gap-6 text-[10px] font-bold uppercase tracking-[.12em] text-white/45 md:flex-row md:items-center md:justify-between">
           <p>© ESABEACH 2024 — All rights reserved</p>
           <div className="flex gap-12">
-            <a href="#">Privacy Policy</a>
+            <a href="/privacy-policy">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
           </div>
         </div>

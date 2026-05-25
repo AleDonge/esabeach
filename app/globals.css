@@ -89,3 +89,31 @@ a {
     width: min(100% - 160px, 1280px);
   }
 }
+
+.form-input {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.035);
+  padding: 16px 18px;
+  color: white;
+  outline: none;
+  transition:
+    border-color 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.form-input:focus {
+  border-color: rgba(111, 174, 214, 0.65);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 0 0 4px rgba(111, 174, 214, 0.1);
+}
+
+.form-input option {
+  color: #071826;
+}

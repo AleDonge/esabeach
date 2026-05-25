@@ -1,4 +1,3 @@
-import { desc } from 'framer-motion/client';
 import { AudioLines, Leaf, Martini, Soup, SunMedium, Umbrella, Utensils } from 'lucide-react';
 
 export const navLinks = ['Experience', 'Events', 'Food', 'Gallery', 'About'];
@@ -40,6 +39,7 @@ export const events = [
   {
     day: '31',
     month: 'MAGGIO',
+    date: '2026-05-31',
     artist: 'DJ EMILIANO EFFE',
     label: 'Brunch DJ Set',
     image: '/media/emilianof1.webp',
@@ -51,6 +51,7 @@ export const events = [
   {
     day: '6',
     month: 'GIUGNO',
+    date: '2026-06-06',
     artist: 'DJ EMILIANO EFFE',
     label: 'DJ Set al tramonto',
     image: '/media/emilianof2.webp',
@@ -62,6 +63,7 @@ export const events = [
   {
     day: '14',
     month: 'GIUGNO',
+    date: '2026-06-14',
     artist: 'Brunch DJ Party',
     label: 'DJ EMILIANO EFFE, Alejambay, Roberto Cappellini, Fancesco Cantoni',
     image: '/media/emilianof3.webp',
@@ -73,6 +75,7 @@ export const events = [
   {
     day: '28',
     month: 'GIUGNO',
+    date: '2026-06-28',
     artist: 'DJ EMILIANO EFFE',
     label: 'Brunch DJ Set',
     image: '/media/emilianof5.webp',
@@ -84,6 +87,7 @@ export const events = [
   {
     day: '12',
     month: 'LUGLIO',
+    date: '2026-07-12',
     artist: 'DJ EMILIANO EFFE',
     label: 'Brunch DJ Set',
     image: '/media/emilianof4.webp',
@@ -95,6 +99,7 @@ export const events = [
   {
     day: '25',
     month: 'LUGLIO',
+    date: '2026-07-25',
     artist: 'DJ EMILIANO EFFE',
     label: 'Sunset DJ Set',
     image: '/media/emilianof6.webp',

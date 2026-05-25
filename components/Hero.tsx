@@ -7,7 +7,11 @@ import { useRef } from 'react';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export default function Hero() {
+export default function Hero({
+    onReserveClick
+  }: {
+    onReserveClick: () => void;
+  }) {
   const ref = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.08, 1.18]);
@@ -55,10 +59,14 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.52, ease }}
             className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
-            <a href="#reserve" className="group inline-flex items-center justify-center gap-8 rounded-full bg-white px-9 py-5 text-[12px] font-bold uppercase tracking-cta text-navy transition-all duration-500 ease-ios hover:scale-[1.03] hover:bg-sand">
+            <button
+              type="button"
+              onClick={onReserveClick}
+              className="group inline-flex items-center justify-center gap-8 rounded-full bg-white px-9 py-5 text-[12px] font-bold uppercase tracking-cta text-navy transition-all duration-500 ease-ios hover:scale-[1.03] hover:bg-sand"
+            >
               Prenota la tua esperienza
               <ArrowUpRight size={17} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
+            </button>
             <a href="#events" className="group inline-flex items-center gap-5 text-[12px] font-bold uppercase tracking-cta text-white">
               Esplora l'estate
               <span className="grid h-9 w-9 place-items-center rounded-full border border-white/45 transition-all duration-500 group-hover:border-white group-hover:bg-white group-hover:text-navy">

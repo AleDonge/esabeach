@@ -8,13 +8,18 @@ import { useState } from 'react';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-export default function EventsSection() {
+export default function EventsSection({
+  onReserveClick,
+  onEventBookingClick
+}: {
+  onReserveClick: () => void;
+  onEventBookingClick: (event: (typeof events)[number]) => void;
+}) {
   const [selectedEvent, setSelectedEvent] = useState<(typeof events)[number] | null>(null);
 
   return (
     <>
       <section id="events" className="relative overflow-hidden bg-navy pb-[80px] md:pb-[120px]">
-        {<section id="events" className="relative overflow-hidden bg-navy pb-[80px] md:pb-[120px]">
       <div className="luxury-container">
         <div className="mb-12 flex items-end justify-between gap-8">
           <div>
@@ -96,8 +101,6 @@ export default function EventsSection() {
         </div>
       </div>
     </section>
-}
-      </section>
 
       <AnimatePresence>
         {selectedEvent && (
@@ -180,9 +183,14 @@ export default function EventsSection() {
                 </div>
 
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                  <a
-                    href="#reserve"
-                    onClick={() => setSelectedEvent(null)}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (!selectedEvent) return;
+
+                      setSelectedEvent(null);
+                      onEventBookingClick(selectedEvent);
+                    }}
                     className="group inline-flex items-center justify-center gap-8 rounded-full bg-white px-8 py-5 text-[12px] font-bold uppercase tracking-cta text-navy transition-all duration-500 hover:scale-[1.03] hover:bg-sand"
                   >
                     Partecipa ora
@@ -190,7 +198,7 @@ export default function EventsSection() {
                       size={17}
                       className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
-                  </a>
+                  </button>
 
                   <button
                     onClick={() => setSelectedEvent(null)}

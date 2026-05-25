@@ -5,7 +5,11 @@ import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({
+    onReserveClick
+  }: {
+    onReserveClick: () => void;
+  }) {
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
   const bg = useTransform(scrollY, [0, 90], ['rgba(7, 24, 38, 0)', 'rgba(7, 24, 38, 0.72)']);
@@ -36,12 +40,13 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-5">
-            <a
-              href="#reserve"
+            <button
+              type="button"
+              onClick={onReserveClick}
               className="hidden rounded-full border border-white/55 px-9 py-3 text-[11px] font-bold uppercase tracking-cta text-white transition-all duration-500 ease-ios hover:border-white hover:bg-white hover:text-navy md:inline-flex"
             >
               Vienici a scoprire
-            </a>
+            </button>
             <button aria-label="Open navigation menu" onClick={() => setOpen(true)} className="grid h-11 w-11 place-items-center text-white">
               <Menu size={34} strokeWidth={1.4} />
             </button>
@@ -75,9 +80,16 @@ export default function Navbar() {
                   {item}
                 </motion.a>
               ))}
-              <a href="#reserve" onClick={() => setOpen(false)} className="mt-8 rounded-full bg-sand px-10 py-4 text-xs font-bold uppercase tracking-cta text-navy">
-                Reserve
-              </a>
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  onReserveClick();
+                }}
+                className="mt-8 rounded-full bg-sand px-10 py-4 text-xs font-bold uppercase tracking-cta text-navy"
+              >
+                Vienici a scoprire
+              </button>
             </div>
           </motion.div>
         )}
